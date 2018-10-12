@@ -81,10 +81,13 @@ RUN \
 
 # Lakshmi's dev settings
 RUN apt install -y zsh \
-    rake
+    rake \
+    tig
 
 RUN wget https://github.com/BurntSushi/ripgrep/releases/download/0.10.0/ripgrep_0.10.0_amd64.deb
 RUN dpkg -i ripgrep_0.10.0_amd64.deb
+RUN pip install virtualenvwrapper
+RUN npm install -g diff-so-fancy
 
 # RUN sh -c "`curl -fsSL https://raw.githubusercontent.com/skwp/dotfiles/master/install.sh`"
 
